@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Feyisetan Olaoluwa - BU23SEN1048</title>
+
+<style>
+  body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    margin: 0;
+    background: linear-gradient(120deg, #0f172a, #1e293b);
+    color: #e5e7eb;
+  }
+
+  header {
+    text-align: center;
+    padding: 60px 20px;
+    background: radial-gradient(circle at top, #4f46e5, #0f172a);
+  }
+
+  header h1 {
+    font-size: 2.8rem;
+    margin-bottom: 10px;
+  }
+
+  header p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+  }
+
+  .container {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 20px;
+  }
+
+  .section {
+    background: #020617;
+    border: 1px solid #3f3f46;
+    border-radius: 16px;
+    padding: 25px;
+    margin-bottom: 25px;
+    box-shadow: 0 15px 25px rgba(0,0,0,0.4);
+  }
+
+  .section h2 {
+    margin-top: 0;
+    color: #a5b4fc;
+  }
+
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 0.9fr;
+    gap: 25px;
+    align-items: center;
+  }
+
+  .about-grid img {
+    width: 100%;
+    border-radius: 16px;
+    border: 2px dashed #6366f1;
+    object-fit: cover;
+  }
+
+  .skills-list {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .skill {
+    background: #111827;
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid #4b5563;
+    text-align: center;
+  }
+
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+  }
+
+  .gallery div {
+    height: 140px;
+    background: #0f172a;
+    border: 1px dashed #6366f1;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #94a3b8;
+    font-size: 0.9rem;
+  }
+
+  button {
+    background: #6366f1;
+    border: none;
+    color: white;
+    padding: 10px 16px;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background: #4f46e5;
+  }
+
+  footer {
+    text-align: center;
+    padding: 30px;
+    color: #9ca3af;
+  }
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>Feyisetan Olaoluwa. Software Engineering Student, Bowen University</h1>
+  <p>Passionate about Problem Solving • Web Development • Clean Code & Innovation</p>
+</header>
+
+<div class="container">
+
+  <div class="section">
+    <h2>About Me</h2>
+    <div class="about-grid">
+      <div>
+        <p>
+          I am a dedicated Software Engineering student with a strong interest in
+          building efficient, scalable, and user-focused applications. I enjoy
+          solving real-world problems through technology, learning new tools,
+          and constantly improving my skills.
+        </p>
+        <p>
+          My areas of interest include web development, system design,
+          algorithms, and collaborative software projects.
+        </p>
+      </div>
+
+      <img src="" alt="Your Photo / Placeholder — Click to Replace" id="profileImage">
+    </div>
+    <br>
+    <button onclick="changeImage()">Upload Profile Image</button>
+  </div>
+
+  <div class="section">
+    <h2>Skills & Technologies</h2>
+    <div class="skills-list">
+      <div class="skill">HTML & CSS</div>
+      <div class="skill">JavaScript</div>
+      <div class="skill">React</div>
+      <div class="skill">Git & GitHub</div>
+      <div class="skill">Python</div>
+      <div class="skill">SQL</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Goals & Aspirations</h2>
+    <p>
+      My goal is to grow into a highly skilled software engineer who builds
+      meaningful and impactful products. I aim to work on innovative projects,
+      collaborate with talented teams, and contribute to open-source communities.
+    </p>
+  </div>
+
+</div>
+
+<footer>
+  © 2025 — Feyisetan Olaoluwa
+</footer>
+
+<script>
+function changeImage() {
+  const input = document.createElement("input");
+  input.type = "file";
+  input.accept = "image/*";
+
+  input.onchange = (event) => {
+    const file = event.target.files[0];
+    const reader = new FileReader();
+    reader.onload = () => {
+      document.getElementById("profileImage").src = reader.result;
+    };
+    reader.readAsDataURL(file);
+  };
+
+  input.click();
+}
+</script>
+
+</body>
+</html>
